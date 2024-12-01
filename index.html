@@ -12,31 +12,122 @@
             margin: 20px;
         }
 
-        table {
+        /* First table without borders */
+        .no-border-table {
+            width: auto;
             border-collapse: collapse;
-            width: 100%;
+            margin-bottom: 10px;
         }
 
-        th, td {
+        .no-border-table td {
+            padding: 0;
+            border: none; /* No border for the first table */
+        }
+
+        .label {
+            font-weight: normal;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .colon {
+            text-align: left;
+            padding-right: 5px;
+        }
+
+        .value {
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .reg-no {
+            text-align: right;
+            font-weight: normal;
+            margin-top: 10px;
+        }
+
+        .reg-no-bold {
+            font-weight: bold;
+        }
+
+        .reg-no-spacing {
+            display: inline-block;
+            padding-right: 14ch;
+        }
+
+        /* Styles for bordered tables */
+        .bordered-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .bordered-table th,
+        .bordered-table td {
             border: 1px solid #000;
             padding: 8px;
-            text-align: center; /* Default center alignment */
+            text-align: center;
         }
 
-        th {
+        .bordered-table th {
             background-color: #f2f2f2;
         }
 
-        /* Left-align specific rows */
+        /* Additional alignment for some rows */
         .left-align {
             text-align: left;
-            padding-left: 10px; /* Adds padding for better appearance */
+            padding-left: 10px;
+        }
+
+        /* Last grading table styles */
+        .grading-table {
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: 0;
+        }
+
+        .grading-table td {
+            padding: 10px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <center><img src="ahh.jpg"></center>
-    <table>
+    <center><img src="ahh.jpg" alt="Logo"></center><br><br><br>
+
+    <!-- First table without borders -->
+    <table class="no-border-table">
+        <tr>
+            <td class="label">Programme</td>
+            <td class="colon">:</td>
+            <td class="value"><span class="bold">Bachelor of Commerce</span></td>
+        </tr>
+        <tr>
+            <td class="label">Semester</td>
+            <td class="colon">:</td>
+            <td class="value"><span class="bold">Second Semester, April 2024</span></td>
+        </tr>
+        <tr>
+            <td class="label">College</td>
+            <td class="colon">:</td>
+            <td class="value">Sharaf Arts and Science College, Padne</td>
+        </tr>
+        <tr>
+            <td class="label">Name</td>
+            <td class="colon">:</td>
+            <td class="value"><span class="bold">IJAS IBRAHIM</span></td>
+        </tr>
+    </table>
+
+    <!-- Reg No. on the right side -->
+    <div class="reg-no">Reg No. <span class="reg-no-bold">SH23BR0009</span><span class="reg-no-spacing"></span></div>
+
+    <!-- Bordered table -->
+    <table class="bordered-table">
         <tr>
             <th rowspan="2">Course Code</th>
             <th rowspan="2">Course Title</th>
@@ -153,25 +244,14 @@
             <td>A+</td>
             <th colspan="2">Passed</th>
         </tr>
-    </table><br>
-        <label> Cr.: Credit; CE: Continuous Evaluation; ESE: End Semester Evaluation; G.P: Grade Point; P: Passed; F: Failed; X: Absent<br>
+    </table>
+
+    <label>Cr.: Credit; CE: Continuous Evaluation; ESE: End Semester Evaluation; G.P: Grade Point; P: Passed; F: Failed; X: Absent<br>
         Grade Point-(Total mark/Total Max) x 10; Credit Point-credit x Grade Point; SGPA-Total Credit Point/ Total Credits<br>
         Percentage of marks = SGPA x 10</label>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <style>
-        table {
-            border-collapse: collapse; /* Ensures single-line borders */
-            text-align: center; /* Centers text in table cells */
-            margin-left: 0; /* Aligns the table to the left */
-        }
-        td {
-            padding: 10px; /* Adds some spacing inside table cells */
-            text-align: center; /* Centers text inside each cell */
-        }
-    </style></head>
-    <table border="1">
+
+    <!-- Grading table -->
+    <table class="grading-table" border="1">
         <tr>
             <td>Mark (%)</td>
             <td>Below 40</td>
@@ -194,16 +274,16 @@
         </tr>
         <tr>
             <td>Grade Range</td>
-            <td>0.00-3.99</td>
-            <td>4.00-4.99</td>
-            <td>5.00-5.99</td>
-            <td>6.00-6.99</td>
-            <td>7.00-7.99</td>
-            <td>8.00-8.99</td>
-            <td>9.00-10.00</td>
+            <td>0.00 - 3.99</td>
+            <td>4.00 - 4.99</td>
+            <td>5.00 - 5.99</td>
+            <td>6.00 - 6.99</td>
+            <td>7.00 - 7.99</td>
+            <td>8.00 - 8.99</td>
+            <td>9.00 - 10.00</td>
         </tr>
-    </table>
-        <label><b>Not less than 40% of aggregate marks of a course with not less than 40% marks in End Semester Evaluation (ESE) shall be<br>
+    </table><br>
+    <label><b>Not less than 40% of aggregate marks of a course with not less than 40% marks in End Semester Evaluation (ESE) shall be<br>
         declared to have passed in that course . A minimum of grade point 4 with letter grade E is needed for the successful completion of<br>
         a course</b></label><br>
         <label><b>Disclaimer: The office of the Examination Branch is not responsible for any inadvertent error that may have crept in the information being<br>
